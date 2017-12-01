@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Success</title>
+</head>
+<body>
+    <div class="container">
+        <h3>List of Deliveries</h3>
+        <br />
+        <table class="table table-bordered table-striped table-responsive">
+            <tr>
+                <th>Date</th>
+                <th>Responsible</th>
+                <th>Day of the Week</th>
+                <th>Driver</th>
+                <th>Cellphone</th>
+                <th>Company</th>
+                <th>Order</th>
+                <th>Type</th>
+                <th>Obs</th>
+                <th>Delivered</th>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Day</th>
+                <th>Week</th>
+            </tr>
+            @foreach (var p in ViewBag.ListProducts)
+            {
+                <tr>
+                <td>@p.Date</td>
+                <td>@p.Responsible</td>
+                <td>@p.Day_of_the_Week</td>
+                <td>@p.Driver</td>
+                <td>@p.Cellphone</td>
+                <td>@p.Company</td>
+                <td>@p.Order</td>
+                <td>@p.Type</td>
+                <td>@p.Obs</td>
+                <td>@p.Delivered</td>
+                <td>@p.Month</td>
+                <td>@p.Year</td>
+                <td>@p.Day</td>
+                <td>@p.Week</td>
+            </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

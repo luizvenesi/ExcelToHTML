@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center jumbotron" style="background-color:lightgray">
+        <h1>Welcome to Excel converter!!!</h1>
+        </div>
+        @using (Html.BeginForm("Import", "Delivery", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.Raw(ViewBag.Error)
+            <div class="input-group">
+                <h3>Excel File</h3> 
+                <br />
+                
+                    <input type="file" name="excelfile" class="btn-default">
+               
+                <br />
+                <br />
+                <input class="btn btn-info" type="submit" value="Import" />
+            </div>
+        }
+    </div>
+</body>
+</html>
